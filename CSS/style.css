@@ -1,0 +1,344 @@
+body {
+	background-color: #333333;
+}
+
+img { /* creates a fluid image*/
+	max-width: 100%;
+}
+
+#container { /* center the page and sets the width*/
+	background-color: #DDDDDD;
+	width= 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav {
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+}
+
+nav ul {
+	padding: 1px 2px 0 2px;
+}
+
+nav li {
+	display: block;
+	list-style-type: none;
+	border-radius: 0.5em;
+	background-color: #99AA99;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	margin-top: 0.3em;
+}
+
+.active {
+		background-color: #778877;
+	}
+
+nav li a:link {
+	color: #222222;
+}
+
+nav li a:visited {
+	color: #990099;
+}
+
+/* Style to remove the underline on nav links */
+nav li a {
+	text-decoration: none;
+}
+
+main {
+	margin-left: .5em;
+	margin-right:.5em;
+}
+
+footer { /* smaller font and center the text*/
+	font-size: 0.75em;
+	text-align: center;
+	background-color: #9999FF;
+}
+
+.center {
+	text-align: center;
+}
+
+.tablet {
+	display: none;
+}
+
+.smallerdesktop {
+	display: none;
+}
+
+.desktop {
+	display: none;
+}
+
+.mobile {
+	display: inline;
+}
+
+input, select, textarea {
+	display: block;
+	margin-bottom: 1em;
+}
+
+label {
+	display: block;
+}
+
+footer img {
+	max-width: 50px;
+	margin-top: 0.3em;
+}
+
+footer p {
+	margin-top: 0.1em;
+}
+
+article h3 {
+	margin-bottom: 0.5em;
+}
+
+article ul {
+	margin-top: 0;
+}
+
+/******************** TABLET media query**********************/
+@media only screen and (min-width: 582px) {
+	
+	header img {
+		max-width: 280px;
+		float: left;
+		padding: 0;
+		margin: 2px 0 0 2px;
+		border-radius: 10em;
+		border: 3px solid #BBBBBB;
+	}
+	
+	nav {
+		padding-top: 0.5em;
+		float: left;
+		width: 30%;
+	}
+	
+	nav ul {
+		padding: 0 0 0 0;
+		margin-left: 5%;
+		margin-right: 0;
+	}
+	
+	nav li {
+		white-space: nowrap;
+		border: 2px solid #a1a1a1;
+		margin-top: 0.5%;
+		margin-right: 3em;
+		margin-left: 0;
+		font-size: 2.5em;
+		border-radius: .5em;
+		padding: 0 5.5em 0 .5em;
+		background-color: #99AA99;
+	}
+	/* Highlights which website you are currently on */
+	.active {
+		background-color: #778877;
+	}
+	
+	/* main centers the text in 90% boundaries, and clears the floats from header/nav */
+	main {
+		clear: both;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 0.5em;
+		overflow: auto;
+	}
+	
+	/* We do not need mobile information on tablets */
+	.mobile {
+		display: none;
+	}
+	
+	/* Desktop only stuff does not need to be displayed */
+	.desktop {
+		display: none;
+	}
+	
+	/* This should only show up on desktop-sized computers */
+	.smallerdesktop {
+		display:none;
+	}
+	
+	/* Display our tablet information, done after hiding desktop only content */
+	.tablet {
+		display: inline;
+	}
+	
+	/* Format our table to look pretty */
+	table {
+		border: 0.1em solid #000000;
+		border-collapse: collapse;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%
+	}
+	
+	/* Display border-lines in between cells */
+	th, td {
+		border: 0.1em solid #000000;
+	}
+	
+	/* Center-align table data */
+	td {
+		text-align: center;
+		height: 2em;
+	}
+	
+	/* Highlight the headers for the table */
+	th {
+		background-color: #CCCCCC;
+	}
+	
+	label {
+		float: left;
+		padding-right: 0.3em;
+	}
+	
+	.center {
+		text-align: center;
+	}
+	
+	caption {
+		font-weight: bold;
+		font-size: 1.5em;
+		margin-bottom: 0.1em;
+	}
+	
+}/* end TABLET*/
+
+/******************** smaller DESKTOP media query**********************/
+@media only screen and (min-width: 844px) and (max-width: 1630px) {
+	/* Move half the nav bar down instead of one piece at a time at this point*/
+	.smallerdesktop {
+		display: inline;
+	}
+}
+
+/******************** DESKTOP media query**********************/
+@media only screen and (min-width: 844px) {
+	
+	/* sets our width for desktops to be smaller, for convenience*/
+	#container{
+		width: 80%
+	}
+	
+	body {
+		clear: both;
+		background: -moz-linear-gradient(#333333, #8888EE); /* Firefox */
+		background: -o-linear-gradient(#333333, #8888EE); /* Opera */
+		background: -webkit-linear-gradient(#333333, #8888EE); /* Chrome, Safari */
+		background: linear-gradient(#333333, #8888EE);
+		background-attachment: fixed;
+	}
+	
+	header img {
+		min-width: 144px;
+		max-width: 15%;
+		float: left;
+	}
+	
+	nav {
+		padding-top: 1%;
+		width: 77%;
+		float: left;
+	}
+	
+	nav ul {
+		margin-top: 16px;
+		margin-bottom: 16px;
+		margin-left: auto;
+		margin-right: auto;
+		float: left;
+	}
+	
+	nav li {
+		display: inline;
+		float: left;
+		margin-left: 0;
+		margin-right: 2px;
+		white-space: nowrap;
+		padding-left: 0;
+		padding-right: 0;
+		width: 6em;
+		border-radius: 0;
+		background-color: white;
+		opacity: 0.8;
+		font-size: 2.5em;
+	}
+	
+	nav li a {
+		display: inline-block;
+	}
+	
+	/* Changes the color of the active link */
+	.active {
+		background-color: #EEEEEE;
+	}
+	
+	/* main centers the text in 90% boundaries, and clears the floats from header/nav */
+	main {
+		clear: both;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		overflow: auto;
+	}
+	
+	/* Changes the format for the about page articles*/
+	main section#MyAbilities article {
+		width: 27%;
+		float: left;
+		margin: .5em .25% auto .25%;
+		background-color: #EEEEEE;
+		padding: 1em;
+		border-radius: 1em;
+	}
+	
+	footer {
+		background-color: #9999FF;
+		font-size: 0.75em;
+		text-align: center;
+	}
+	
+	aside {
+		float: right;
+	}
+	
+	th {
+		background-color: #CCCCCC;
+	}
+	
+	tr:hover {
+		background-color: #D5D5D5;
+	}
+	
+	.center {
+		text-align: center;
+	}
+	
+	.mobile {
+		display: none;
+	}
+	
+	.tablet {
+		display: none;
+	}
+	
+	.desktop {
+		display: inline;
+	}
+	
+} /* end DESKTOP*/
